@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+
+  <body class="container">
+    <header class="header">
+      <h1>Users' posts</h1>
+    </header>
+    <main>
+      <div class="min-h-screen bg-red-800 py-5">
+        <div class="overflow-x-auto w-full">
+          <table class="table">
+            <thead class="table-head">
+              <tr class="table-head-row">
+                <th class="table-head-header">name</th>
+                <th class="table-head-header">username</th>
+                <th class="table-head-header">email</th>
+                <th class="table-head-header">phone</th>
+              </tr>
+            </thead>
+            <tbody class="table-body users"></tbody>
+          </table>
+        </div>
+      </div>
+      <p>click on a name to see the users' pots</p>
+      <div class="posts">
+        <h2 class="posts-header">my posts</h2>
+        <div class="posts-container"></div>
+      </div>
+    </main>
+    <template class="user-template">
+      <tr class="user">
+        <td class="table-body-data">
+          <button class="data-name" type="button">name</button>
+        </td>
+        <td class="table-body-data">
+          <p class="data-username">username</p>
+        </td>
+        <td class="table-body-data">
+          <p class="data-email">email</p>
+        </td>
+        <td class="table-body-data">
+          <p class="data-phone">phone</p>
+        </td>
+      </tr>
+    </template>
+    <template class="post-template">
+      <div class="post-container">
+        <h3 class="post-title">post title</h3>
+        <p class="post-text">post text</p>
+      </div>
+    </template>
+    <script src="./pages/index.js" type="module"></script>
+  </body>
+</html>
