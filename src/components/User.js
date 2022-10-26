@@ -1,16 +1,15 @@
 export class User {
-  constructor({ data, handleUserClick }, userSelector) {
+  constructor({ data, handleUserClick }) {
     this._name = data.name;
     this._username = data.username;
     this._email = data.email;
     this._phone = data.phone;
-    this._userSelector = userSelector;
     this._handleUserClick = handleUserClick;
   }
 
   _getTemplate() {
     const userElement = document
-      .querySelector(this._userSelector)
+      .querySelector(".user-template")
       .content.querySelector(".user")
       .cloneNode(true);
 
