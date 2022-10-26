@@ -1,13 +1,12 @@
 export class Post {
-  constructor({ data }, postSelector) {
+  constructor({ data }) {
     this._title = data.title;
     this._body = data.body;
-    this._postSelector = postSelector;
   }
 
   _getTemplate() {
     const postElement = document
-      .querySelector(this._postSelector)
+      .querySelector(".post-template")
       .content.querySelector(".post-container")
       .cloneNode(true);
 
