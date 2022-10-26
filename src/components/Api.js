@@ -2,21 +2,16 @@ const costumFetch = (url) =>
   fetch(url).then((res) =>
     res.ok ? res.json() : Promise.reject(res.statusText),
   );
+const url = "https://jsonplaceholder.typicode.com";
 
-export class Api {
-  constructor({ baseUrl }) {
-    this._url = baseUrl;
-  }
+export const getInitialPosts = () => {
+  return costumFetch(`${url}/posts`, {});
+};
 
-  getInitialPosts() {
-    return costumFetch(`${this._url}/posts`, {});
-  }
+export const getUsersInfo = () => {
+  return costumFetch(`${url}/users`, {});
+};
 
-  getUsersInfo() {
-    return costumFetch(`${this._url}/users`, {});
-  }
-
-  getPostsByUserId(id) {
-    return costumFetch(`${this._url}/posts?userId=${id}`, {});
-  }
-}
+export const getPostsByUserId = (id) => {
+  return costumFetch(`${url}/posts?userId=${id}`, {});
+};
