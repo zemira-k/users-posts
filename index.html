@@ -28,10 +28,12 @@
         </div>
       </div>
       <p>click on a name to see the users' pots</p>
-      <div class="posts">
-        <h2 class="posts-header">my posts</h2>
-        <div class="posts-container"></div>
-      </div>
+      <section class="posts">
+        <header>
+          <h2 class="posts-header">my posts</h2>
+        </header>
+        <div class="posts-container" id="posts-container"></div>
+      </section>
     </main>
     <template class="user-template">
       <tr class="user">
@@ -50,10 +52,12 @@
       </tr>
     </template>
     <template class="post-template">
-      <div class="post-container">
-        <h3 class="post-title">post title</h3>
+      <section class="post-container" id="post-container">
+        <header>
+          <h3 class="post-title">post title</h3>
+        </header>
         <p class="post-text">post text</p>
-      </div>
+      </section>
     </template>
     <script src="./src/pages/index.js" type="module"></script>
   </body>
