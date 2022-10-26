@@ -8,6 +8,12 @@ export class Section {
     items.forEach(this._renderer);
   }
 
+  removeItems() {
+    if (document.querySelector("#post-container")) {
+      document.querySelectorAll("#post-container").forEach((e) => e.remove());
+    }
+  }
+
   addItem(element) {
     this._container.append(element);
   }
