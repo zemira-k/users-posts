@@ -1,5 +1,4 @@
 import { getPostsByUserId, getUsersInfo } from "../components/api.js";
-
 import { User } from "../components/User.js";
 import { Post } from "../components/Post.js";
 import { Section } from "../components/Section.js";
