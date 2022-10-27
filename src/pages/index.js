@@ -23,24 +23,6 @@ export const getPostsByUserId = (id) => {
 const users = new Section({ renderer: createUser }, ".users");
 const posts = new Section({ renderer: createPost }, ".posts-container");
 
-const costumFetch = (url) =>
-  fetch(url).then((res) =>
-    res.ok ? res.json() : Promise.reject(res.statusText),
-  );
-const url = "https://jsonplaceholder.typicode.com";
-
-export const getInitialPosts = () => {
-  return costumFetch(`${url}/posts`, {});
-};
-
-export const getUsersInfo = () => {
-  return costumFetch(`${url}/users`, {});
-};
-
-export const getPostsByUserId = (id) => {
-  return costumFetch(`${url}/posts?userId=${id}`, {});
-};
-
 function createPost(data) {
   const post = new Post({
     data,
