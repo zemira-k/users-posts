@@ -1,7 +1,24 @@
-import { getPostsByUserId, getUsersInfo } from "../components/api.js";
 import { User } from "../components/User.js";
 import { Post } from "../components/Post.js";
 import { Section } from "../components/Section.js";
+
+const costumFetch = (url) =>
+  fetch(url).then((res) =>
+    res.ok ? res.json() : Promise.reject(res.statusText),
+  );
+const url = "https://jsonplaceholder.typicode.com";
+
+export const getInitialPosts = () => {
+  return costumFetch(`${url}/posts`, {});
+};
+
+export const getUsersInfo = () => {
+  return costumFetch(`${url}/users`, {});
+};
+
+export const getPostsByUserId = (id) => {
+  return costumFetch(`${url}/posts?userId=${id}`, {});
+};
 
 const users = new Section({ renderer: createUser }, ".users");
 const posts = new Section({ renderer: createPost }, ".posts-container");
