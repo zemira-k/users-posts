@@ -1,6 +1,6 @@
-import { User } from "./src/components/User.js";
-import { Post } from "./src/components/Post.js";
-import { Section } from "./src/components/Section.js";
+import { User } from "../components/User";
+import { Post } from "../components/Post";
+import { Section } from "../components/Section";
 
 const costumFetch = (url) =>
   fetch(url).then((res) =>
